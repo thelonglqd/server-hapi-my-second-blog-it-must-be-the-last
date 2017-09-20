@@ -1,0 +1,14 @@
+{
+  "name": "server-hapi-my-second-blog-it-must-be-the-last",
+  "version": "1.0.0",
+  "description": "server for my blog website, developed with Hapi.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dqlgnolwht",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^16.6.0"
+  }
+}
