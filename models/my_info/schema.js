@@ -11,4 +11,4 @@ const my_info_schema = new Schema({
   skills: [{ name: String, experience: String, frameworks: [String], libs: [String]}]
 });
 
-module.exports = my_info_schema;
+module.exports = mongoose.model('MyInfo', my_info_schema);

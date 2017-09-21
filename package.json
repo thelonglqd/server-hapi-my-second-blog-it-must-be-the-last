@@ -4,7 +4,7 @@
   "description": "server for my blog website, developed with Hapi.js",
   "main": "server.js",
   "scripts": {
-    "start": "node db.js && node server.js"
+    "start": "node server.js"
   },
   "author": "dqlgnolwht",
   "license": "ISC",

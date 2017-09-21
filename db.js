@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/my-blog');
 
 const db = mongoose.connection;
-const my_info_schema = require('./models/my_info/schema');
+const My_Info = require('./models/my_info/schema');
 
 db.on('error', (err) => {
   console.log('can not connect to mongodb due to error: ', err);
@@ -10,8 +10,8 @@ db.on('error', (err) => {
 
 db.on('open', () => {
   console.log('=====init data=====');
-  const My_info = mongoose.model('MyInfo', my_info_schema);
-  const my_info_instance = new My_info({
+  // const My_info = mongoose.model('MyInfo', my_info_schema);
+  const my_info_instance = new My_Info({
     name:  'Nguyễn Thế Phụng Long',
     title: 'Javascrip Developer',
     email:   'thelonglqd2911@gmail.com',
@@ -49,3 +49,5 @@ db.on('open', () => {
   });
   console.log('we are connected with mongodb');
 });
+
+module.exports = db;

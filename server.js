@@ -1,4 +1,6 @@
 const Hapi = require('hapi');
+const routes = require('./routes');
+const db = require('./db');
 
 // Create a server with host and port
 const server = new Hapi.Server();
@@ -8,14 +10,7 @@ server.connection({
   port: 8080
 });
 
-// Add a route
-server.route({
-  method: 'GET',
-  path: '/hello',
-  handler: function(request, reply) {
-    return reply('hello world');
-  }
-});
+server.route(routes);
 
 // Start the server
 server.start((err) => {
