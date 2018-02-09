@@ -9,12 +9,13 @@
 var app = require('../app');
 var debug = require('debug')('my-second-blog-it-must-be-the-last-server:server');
 var http = require('http');
+var nconf = require('nconf');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(nconf.get('PORT'));
 app.set('port', port);
 
 /**
