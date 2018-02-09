@@ -6,6 +6,8 @@ import bodyParser from 'body-parser';
 import index from './routes/index';
 import users from './routes/users';
 
+import log from './logger';
+
 const app = express();
 
 app.use(logger('dev'));
@@ -20,6 +22,7 @@ app.use('/users', users);
 app.use((req, res, next) => {
   const err = new Error('Not Found');
   err.status = 404;
+  log.debug(err);
   next(err);
 });
 
@@ -31,6 +34,7 @@ app.use((err, req, res) => {
 
   // render the error page
   res.status(err.status || 500);
+  log.debug(err);
   res.json(err);
 });
 
