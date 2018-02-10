@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www --exec babel-node",
-    "dev": "NODE_ENV=development MONGO_URL=mongodb://localhost:27017 PORT=3000 npm start",
+    "dev": "NODE_ENV=development MYSQL_URL=mysql://root:123456@localhost:3306/mypage PORT=3000 npm start",
     "test": "mocha --compilers js:babel-core/register"
   },
   "dependencies": {
@@ -14,7 +14,10 @@
     "express": "~4.15.5",
     "mocha": "^5.0.0",
     "morgan": "~1.9.0",
+    "mysql2": "^1.5.2",
     "nconf": "^0.10.0",
+    "sequelize": "^4.33.2",
+    "sequelize-cli": "^3.2.0",
     "winston": "^2.4.0",
     "winston-daily-rotate-file": "^1.7.2"
   },
