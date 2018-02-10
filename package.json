@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www --exec babel-node",
-    "dev": "NODE_ENV=development MYSQL_URL=mysql://root:123456@localhost:3306/mypage PORT=3000 npm start",
+    "dev": "NODE_ENV=development PORT=3000 npm start",
+    "prod": "NODE_ENV=production PORT=3000 npm start",
     "test": "mocha --compilers js:babel-core/register"
   },
   "dependencies": {
