@@ -3,11 +3,13 @@ export default (sequelize, DataTypes) => {
     username: DataTypes.STRING,
     password: DataTypes.STRING,
   }, {
-    classMethods: {
-      associate(models) {
-        User.hasMany(models.Post);
-      },
-    },
+    underscored: true,
+    timestamps: true,
   });
+
+  User.associate = (models) => {
+    User.hasMany(models.Post);
+  };
+
   return User;
 };
