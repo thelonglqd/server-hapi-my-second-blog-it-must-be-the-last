@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  res.send({ message: 'index route' });
+  res.send({});
 });
 
 module.exports = router;

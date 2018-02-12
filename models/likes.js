@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
   const Like = sequelize.define('Like', {
-    type: DataTypes.ENUM('Post', 'Comment'),
+    type: { type: DataTypes.ENUM('Post', 'Comment'), allowNull: false },
   }, {
     underscored: true,
     timestamps: true,

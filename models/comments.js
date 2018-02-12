@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
   const Comment = sequelize.define('Comment', {
-    content: DataTypes.STRING,
+    content: { type: DataTypes.STRING, allowNull: false },
   }, {
     underscored: true,
     timestamps: true,

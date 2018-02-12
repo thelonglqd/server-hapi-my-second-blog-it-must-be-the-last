@@ -1,9 +1,18 @@
 export default (sequelize, DataTypes) => {
   const Group = sequelize.define('Group', {
-    name: DataTypes.STRING,
+    name: { type: DataTypes.STRING, allowNull: false },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false,
+    },
   }, {
     underscored: true,
-    timestamps: true,
   });
 
   Group.associate = (models) => {
