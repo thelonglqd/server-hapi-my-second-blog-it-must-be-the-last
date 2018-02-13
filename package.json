@@ -9,6 +9,8 @@
     "test": "mocha --compilers js:babel-core/register"
   },
   "dependencies": {
+    "@feathersjs/errors": "^3.3.0",
+    "bcrypt": "^1.0.3",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
